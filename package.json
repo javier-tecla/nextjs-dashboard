@@ -1,13 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "start": "next start",
-    "seed": "node -r dotenv/config ./scripts/seed.js",
-    "lint": "next lint"
+    "test": "npm run lint && npm run prettier:check",
+    "dev": "next dev"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -16,7 +15,7 @@
     "@vercel/postgres": "^0.5.1",
     "autoprefixer": "10.4.15",
     "bcrypt": "^5.1.1",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.0",
     "next": "^14.0.2",
     "next-auth": "^5.0.0-beta.13",
     "postcss": "8.4.31",
@@ -43,5 +42,3 @@
     "node": ">=18.17.0"
   }
 }
-
-
